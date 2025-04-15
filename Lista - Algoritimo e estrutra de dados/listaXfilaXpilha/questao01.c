@@ -17,17 +17,17 @@ No* inserir_final(No* head, int valor) {
     No* novo = (No*)malloc(sizeof(No));
     
     novo->dado = valor;
-    novo->prox = NULL; // Novo nó sempre aponta para NULL
+    novo->prox = NULL; 
 
     if (head == NULL) {
-        return novo; // Se a lista estiver vazia, o novo nó é a cabeça
+        return novo;
     }
 
     No* atual = head;
     while (atual->prox != NULL) {
-        atual = atual->prox; // Percorre até o último nó
+        atual = atual->prox; 
     }
-    atual->prox = novo; // O último nó agora aponta para o novo nó
+    atual->prox = novo; 
     return head;
 }
 
